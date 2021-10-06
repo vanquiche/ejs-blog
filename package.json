@@ -1,8 +1,8 @@
 {
-  "name": "esj-blog-v2",
+  "name": "ejs-blog-v2",
   "version": "1.0.0",
   "private": true,
-  "description": "esj-blog-v2",
+  "description": "ejs-blog-v2",
   "author": "vanquiche",
   "keywords": [
     "gatsby"
