@@ -56,9 +56,7 @@ export default function Landing() {
         </nav>
       </Slide>
       <div className={style.landingContent}>
-        <Fade>
-          <h1 className={style.landingHeader}>everything javascript</h1>
-        </Fade>
+        <h1 className={style.landingHeader}>everything javascript</h1>
         <Fade bottom>
           <h4 className={style.landingSubheading}>
             welcome friend, let's learn something new today.
