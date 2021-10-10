@@ -3,16 +3,17 @@
 @import url(https://fonts.googleapis.com/css?family=Short+Stack:regular);
 @import url(https://fonts.googleapis.com/css?family=Advent+Pro:100,200,300,regular,500,600,700);
 @import url(https://fonts.googleapis.com/css?family=Fleur+De+Leah:regular);
-/* waves css */
+/* scroll snap unfortunately disable gatsby's anchor link */
 section {
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
 }
 .mainWrapper {
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  height: 100vh;
+  height: 100vh; */
 }
 
+/* waves css */
 .wave {
   position: absolute;
   right: -28px;
