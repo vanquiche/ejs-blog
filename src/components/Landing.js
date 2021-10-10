@@ -37,7 +37,7 @@ export default function Landing() {
       className={style.card}
       style={{ backgroundColor: '#E96767' }}
     >
-      <Slide top delay={4000}>
+      <Slide top>
         <nav className={style.navbar}>
           <ul>
             {links.map((link) => {
@@ -47,6 +47,7 @@ export default function Landing() {
                     title={link.text}
                     to={`/#${link.section}`}
                     className={style.navLink}
+                    // stripHash
                   />
                 </li>
               );

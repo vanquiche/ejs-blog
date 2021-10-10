@@ -17,7 +17,7 @@ export default function WhyJSslide4() {
     'Rust',
   ];
   return (
-    <section className={style.card} style={{ backgroundColor: '#6BB1D9' }}>
+    <div className={style.card} style={{ backgroundColor: '#6BB1D9' }}>
       <div className={style.pageContent}>
         <Fade right>
           <SectionTitle styleName={style.wjs_slide4}>
@@ -42,6 +42,6 @@ export default function WhyJSslide4() {
           </p>
         </Fade>
       </div>
-    </section>
+    </div>
   );
 }

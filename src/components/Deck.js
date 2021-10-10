@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-export default function Deck({slides}) {
+export default function Deck({ slides }) {
   var settings = {
     className: 'content',
     arrows: false,
@@ -15,10 +15,12 @@ export default function Deck({slides}) {
     swipeToSlide: true,
   };
   return (
-    <Slider {...settings}>
-      {slides.map((slide) => {
-        return slide;
-      })}
-    </Slider>
+    <section>
+      <Slider {...settings}>
+        {slides.map((slide) => {
+          return slide;
+        })}
+      </Slider>
+    </section>
   );
 }

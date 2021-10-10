@@ -5,6 +5,8 @@ import WhyJSslide2 from '../components/WhyJS-slide2';
 import WhyJSslide3 from '../components/WhyJS-slide3';
 import WhyJSslide4 from '../components/WhyJS-slide4';
 import Landing from '../components/Landing';
+import GetStarted from '../components/GetStarted';
+import * as style from '../styles/styles.module.css';
 import '../styles/global.css';
 
 // markup
@@ -16,9 +18,10 @@ const IndexPage = () => {
     <WhyJSslide4 />,
   ];
   return (
-    <main>
+    <main className={style.mainWrapper}>
       <Landing />
       <Deck slides={pages} />
+      <GetStarted />
     </main>
   );
 };

@@ -5,7 +5,7 @@ import * as style from '../styles/styles.module.css';
 
 export default function WhyJSslide1() {
   return (
-    <section
+    <div
       id='whyJS'
       className={style.card}
       style={{ backgroundColor: '#EAA24D' }}
@@ -35,6 +35,6 @@ export default function WhyJSslide1() {
           <h5>swipe right to learn why.</h5>
         </Slide>
       </div>
-    </section>
+    </div>
   );
 }

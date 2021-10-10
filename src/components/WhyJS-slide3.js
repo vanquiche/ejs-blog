@@ -6,7 +6,7 @@ import * as style from '../styles/styles.module.css';
 
 export default function WhyJSslide3() {
   return (
-    <section className={style.card} style={{ backgroundColor: '#DE8ED1' }}>
+    <div className={style.card} style={{ backgroundColor: '#DE8ED1' }}>
       <svg
         className={style.wave}
         width='100'
@@ -41,6 +41,6 @@ export default function WhyJSslide3() {
           </p>
         </Fade>
       </div>
-    </section>
+    </div>
   );
 }
