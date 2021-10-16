@@ -30,6 +30,8 @@ export default function GetStarted() {
             Getting Started
           </SectionTitle>
           {data.allSanityPost.edges.map((item) => (
+            // move this into a separate component
+            // with its own state, and inherit props
             <article className={style.postLink}>
               <h2 className={style.postTitle}>{item.node.title}</h2>
               <h2 className={style.postSubTitle}>{item.node.subTitle}</h2>
