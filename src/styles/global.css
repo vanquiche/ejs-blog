@@ -356,6 +356,7 @@ template {
 }
 a {
   text-decoration: none;
+  color: whitesmoke;
 }
 a:visited:link {
   color: inherit;

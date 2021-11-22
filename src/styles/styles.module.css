@@ -162,11 +162,26 @@ section {
 }
 .postTitle {
   font-family: Montserrat;
-  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
   font-weight: 600;
 }
 .postSubTitle {
   font-family: Montserrat;
-  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
   font-weight: 400;
+}
+
+.postCard {
+  margin: 25px;
+
+}
+
+.postContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.latestBody {
+  margin: 0 auto;
+  width: clamp(350px, 100%, 800px);
 }

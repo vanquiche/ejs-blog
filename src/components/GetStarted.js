@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Fade from 'react-reveal';
 import SectionTitle from './SectionTitle';
 import * as style from '../styles/styles.module.css';
+import PostCard from './PostCard';
 
 export default function GetStarted() {
   const data = useStaticQuery(graphql`
@@ -12,12 +13,13 @@ export default function GetStarted() {
           node {
             subTitle
             title
+            _rawSlug
           }
         }
       }
     }
   `);
-
+  
   return (
     <section
       className={style.blogCard}
@@ -29,15 +31,15 @@ export default function GetStarted() {
           <SectionTitle styleName={style.featuredTitle}>
             Getting Started
           </SectionTitle>
-          {data.allSanityPost.edges.map((item) => (
+          {data.allSanityPost.edges.map((item) => {
             // move this into a separate component
             // with its own state, and inherit props
-            <article className={style.postLink}>
-              <h2 className={style.postTitle}>{item.node.title}</h2>
-              <h2 className={style.postSubTitle}>{item.node.subTitle}</h2>
-              <small className={style.readText}></small>
-            </article>
-          ))}
+            const { title, subTitle, _rawSlug } = item.node;
+            return (
+
+              <PostCard title={title} subTitle={subTitle} slug={_rawSlug} />
+            );
+          })}
         </Fade>
       </div>
     </section>
