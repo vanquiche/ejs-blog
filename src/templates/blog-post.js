@@ -1,13 +1,17 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import PortableText from '@sanity/block-content-to-react';
+import Blog from '../components/Blog';
+import Layout from '../components/Layout';
 
 export const query = graphql`
   query BlogPostTemplateQuery($id: String!) {
     post: sanityPost(id: { eq: $id }) {
       id
-      publishedAt(formatString: "MMMM D YYYY")
+      publishedAt(formatString: "MMM D YYYY")
       _rawBody
+      author {
+        name
+      }
       subTitle
       title
       slug {
@@ -19,13 +23,20 @@ export const query = graphql`
 
 const blogPost = (props) => {
   const { data } = props;
+  const { title, subTitle, _rawBody } = data.post;
+  const info = {
+    author: data.post.author.name,
+    published: data.post.publishedAt
+  }
+
   return (
-    <div>
-      <h1>{data.post.title}</h1>
-      <h2>{data.post.subTitle}</h2>
-      <p>{data.post.publishedAt}</p>
-      <PortableText blocks={data.post._rawBody} />
-    </div>
+    <Layout>
+      <Blog
+        title={title}
+        subTitle={subTitle}
+        block={_rawBody}
+        info={info} />
+    </Layout>
   );
 };
 

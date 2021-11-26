@@ -18,18 +18,12 @@ export default function Landing() {
       text: 'latest post',
       section: 'latestPost',
     },
-    {
-      text: 'contact',
-      section: 'contact',
-    },
+
     {
       text: 'about',
       section: 'about',
     },
-    {
-      text: 'follow',
-      section: 'follow',
-    },
+
   ];
   return (
     <section

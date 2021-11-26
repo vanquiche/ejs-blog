@@ -19,11 +19,11 @@ export default function GetStarted() {
       }
     }
   `);
-  
+
   return (
     <section
       className={style.blogCard}
-      style={{ backgroundColor: 'lightblue' }}
+      style={{ backgroundColor: '#6A85B4' }}
       id='getStarted'
     >
       <div className={style.postContainer}>
@@ -36,7 +36,6 @@ export default function GetStarted() {
             // with its own state, and inherit props
             const { title, subTitle, _rawSlug } = item.node;
             return (
-
               <PostCard title={title} subTitle={subTitle} slug={_rawSlug} />
             );
           })}

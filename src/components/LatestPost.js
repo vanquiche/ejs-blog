@@ -4,7 +4,6 @@ import { Link } from 'gatsby';
 // components
 import PortableText from '@sanity/block-content-to-react';
 import SectionTitle from './SectionTitle';
-import Page from './Page';
 // css
 import Slide from 'react-reveal';
 import * as style from '../styles/styles.module.css';
@@ -24,9 +23,22 @@ export default function LatestPost() {
       }
     }
   `);
-  const { title, subTitle, _rawBody } = data.allSanityPost.edges[0].node;
+  const { title, subTitle, _rawBody, _rawSlug } =
+    data.allSanityPost.edges[0].node;
+
+  const linkContainer = {
+    display: 'flex',
+    width: '300px',
+    justifyContent: 'space-around',
+    margin: '15px 0',
+    fontFamily: 'Montserrat',
+  };
   return (
-    <Page id='latestPost' bgColor='lightgreen'>
+    <section
+      id='latestPost'
+      className={style.latestPost}
+      style={{ backgroundColor: '#7BB88C' }}
+    >
       <Slide bottom>
         <SectionTitle
           position='center'
@@ -38,13 +50,17 @@ export default function LatestPost() {
       </Slide>
       <Slide bottom cascade>
         <div className={style.latestBody}>
-          <h3>{title}</h3>
-          <h3>{subTitle}</h3>
+          <header>
+            <h2 className={style.blogTitle}>{title.toUpperCase()}</h2>
+            <h4 className={style.blogSubTitle}>{subTitle.toUpperCase()}</h4>
+          </header>
           <PortableText blocks={_rawBody} />
         </div>
-
-        <Link to='/posts'>view all post</Link>
+        <div style={linkContainer}>
+          <Link to={`/posts/${_rawSlug.current}`}>read</Link>
+          <Link to='/posts'>view all post</Link>
+        </div>
       </Slide>
-    </Page>
+    </section>
   );
 }
