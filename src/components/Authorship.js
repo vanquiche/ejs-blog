@@ -3,18 +3,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
 import { faClock } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
+import * as style from '../styles/styles.module.css';
 
-export default function Authorship({meta}) {
-  const style = {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
-    width: '100%',
-    marginBottom: '30px',
-    fontSize: '0.95rem'
-  }
+export default function Authorship({meta, time}) {
+  // const style = {
+  //   display: 'flex',
+  //   flexDirection: 'row',
+  //   justifyContent: 'space-evenly',
+  //   width: '100%',
+  //   marginBottom: '30px',
+  //   fontSize: '0.95rem'
+  // }
   return (
-    <div style={style}>
+    <div className={style.authorship}>
       {/* author, publishing date, read-time */}
       <p>
         <FontAwesomeIcon style={{marginRight: '10px'}} icon={faUser} />
@@ -26,7 +27,7 @@ export default function Authorship({meta}) {
       </p>
       <p>
         <FontAwesomeIcon style={{marginRight: '10px'}} icon={faClock} />
-        15mins
+        {`${time}mins`}
       </p>
     </div>
   );

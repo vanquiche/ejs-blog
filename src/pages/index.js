@@ -9,6 +9,8 @@ import GetStarted from '../components/GetStarted';
 import * as style from '../styles/styles.module.css';
 import '../styles/global.css';
 import LatestPost from '../components/LatestPost';
+import Footer from '../components/Footer';
+import About from '../components/About';
 
 // markup
 const IndexPage = () => {
@@ -24,6 +26,8 @@ const IndexPage = () => {
       <Deck slides={pages} />
       <GetStarted />
       <LatestPost />
+      <About />
+      <Footer />
     </main>
   );
 };

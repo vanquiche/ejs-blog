@@ -21,7 +21,7 @@ export default function WhyJSslide4() {
       <div className={style.pageContent}>
         <Fade right>
           <SectionTitle styleName={style.wjs_slide4}>
-            Smooth Transition
+            SMOOTH TRANSITION
           </SectionTitle>
           <p style={{ textAlign: 'left' }}>
             In today’s ever-growing tech field it’s hard to decide what

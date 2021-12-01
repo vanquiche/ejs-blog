@@ -23,12 +23,12 @@ export default function GetStarted() {
   return (
     <section
       className={style.blogCard}
-      style={{ backgroundColor: '#6A85B4' }}
+      style={{ backgroundColor: '#59AAC0' }}
       id='getStarted'
     >
       <div className={style.postContainer}>
         <Fade bottom>
-          <SectionTitle styleName={style.featuredTitle}>
+          <SectionTitle position='center' styleName={style.featuredTitle}>
             Getting Started
           </SectionTitle>
           {data.allSanityPost.edges.map((item) => {

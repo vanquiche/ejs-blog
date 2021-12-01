@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 import Blog from '../components/Blog';
 import Layout from '../components/Layout';
 
@@ -17,6 +17,9 @@ export const query = graphql`
       slug {
         current
       }
+      categories {
+        title
+      }
     }
   }
 `;
@@ -26,16 +29,12 @@ const blogPost = (props) => {
   const { title, subTitle, _rawBody } = data.post;
   const info = {
     author: data.post.author.name,
-    published: data.post.publishedAt
-  }
+    published: data.post.publishedAt,
+  };
 
   return (
     <Layout>
-      <Blog
-        title={title}
-        subTitle={subTitle}
-        block={_rawBody}
-        info={info} />
+      <Blog title={title} subTitle={subTitle} block={_rawBody} info={info} />
     </Layout>
   );
 };

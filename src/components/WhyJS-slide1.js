@@ -8,7 +8,7 @@ export default function WhyJSslide1() {
     <div
       id='whyJS'
       className={style.card}
-      style={{ backgroundColor: '#EAA24D' }}
+      style={{ backgroundColor: '#77ACA2' }}
     >
       <svg
         className={style.wave}
@@ -27,11 +27,11 @@ export default function WhyJSslide1() {
       <div className={style.pageContent}>
         <Slide left>
           <h5>you must be thinking...</h5>
-            <div className={style.centerText}>
-              <SectionTitle position='center' styleName={style.wjs_slide1}>
-                why javascript?
-              </SectionTitle>
-            </div>
+          <div className={style.centerText}>
+            <SectionTitle position='center' styleName={style.wjs_slide1}>
+              why javascript?
+            </SectionTitle>
+          </div>
           <h5>swipe right to learn why.</h5>
         </Slide>
       </div>

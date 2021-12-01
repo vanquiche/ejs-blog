@@ -10,8 +10,8 @@ export default function PostCard({
   return (
     <article className={style.postLink}>
         <Link to={`/posts/${slug.current}`}>
-          <h2 className={style.postTitle}>{title}</h2>
-          <h2 className={style.postSubTitle}>{subTitle}</h2>
+          <h2 className={style.postTitle}>{title.toUpperCase()}</h2>
+          <h4 className={style.postSubTitle}>{subTitle}</h4>
           <small className={style.readText}></small>
         </Link>
       </article>

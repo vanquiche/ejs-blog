@@ -1,6 +1,5 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import { Link } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 // components
 import PortableText from '@sanity/block-content-to-react';
 import SectionTitle from './SectionTitle';
@@ -57,7 +56,7 @@ export default function LatestPost() {
           <PortableText blocks={_rawBody} />
         </div>
         <div style={linkContainer}>
-          <Link to={`/posts/${_rawSlug.current}`}>read</Link>
+          <Link to={`/posts/${_rawSlug.current}`}>read more</Link>
           <Link to='/posts'>view all post</Link>
         </div>
       </Slide>
