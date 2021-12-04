@@ -1,26 +1,14 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { Link } from 'gatsby';
+import * as style from '../styles/styles.module.css';
 
-export default function Related({category}) {
-  // const query = useStaticQuery(graphql`
-  //   query ($eq: String = category) {
-  //     allSanityPost(
-  //       filter: { categories: { elemMatch: { title: { eq: $eq } } } }
-  //     ) {
-  //       edges {
-  //         node {
-  //           title
-  //           slug {
-  //             current
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `);
+export default function Related({ title, subtitle, slug }) {
   return (
-    <div>
-
+    <div className={style.relatedContainer}>
+      <Link to={`/posts/${slug}`} style={{color: 'black'}}>
+        <h3>{title}</h3>
+        <h4>{subtitle}</h4>
+      </Link>
     </div>
-  )
+  );
 }

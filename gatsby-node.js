@@ -26,13 +26,13 @@ exports.createPages = async function({ actions, graphql }) {
     const postEdges = (result.data.allSanityPost || {}).edges || [];
 
     postEdges.forEach((edge) => {
-      const { categories, id, slug = {} } = edge.node;
-
+      const { id, slug = {} } = edge.node;
+      const category = edge.node.categories[0].title;
       const path = `/posts/${slug.current}`;
       createPage({
         path,
         component: require.resolve('./src/templates/blog-post.js'),
-        context: { id, categories },
+        context: { id, category },
       });
     });
   };

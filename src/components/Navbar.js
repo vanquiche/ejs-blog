@@ -49,7 +49,6 @@ export default function Navbar() {
       </Link>
       <Link to='/'>home</Link>
       <Link to='/posts'>posts</Link>
-      <Link to='/about'>about</Link>
       <Link to='/contact'>contact</Link>
       <FontAwesomeIcon
         className={style.sandwichBtn}

@@ -261,8 +261,8 @@ section {
   grid-template-columns: 1fr;
   grid-template-areas:
     'body'
-    'comments'
-    'readings';
+    'related';
+
   width: clamp(300px, 90%, 1000px);
   margin: 25px auto;
   font-size: 1.1rem;
@@ -281,11 +281,10 @@ section {
 }
 .blogTitle {
   font-family: Outfit;
-  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
   font-weight: 700;
   word-spacing: 5px;
   margin-bottom: 15px;
-  line-height: 1.5rem;
   text-align: center;
 }
 .blogSubTitle {
@@ -328,6 +327,10 @@ section {
   border-radius: 10px;
 }
 
+.layoutBody {
+  height: auto;
+  min-height: 1000px;
+}
 .footerWrapper {
   background-color: #2B2B2B;
   color: whitesmoke;
@@ -442,6 +445,32 @@ section {
   width: 100%;
   margin-bottom: 30px;
 
+}
+
+.related {
+  display: flex;
+  flex-direction: column;
+  margin: 25px auto;
+  /* outline: 1px solid red; */
+  width: 500px;
+}
+.relatedHeading {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: Montserrat;
+  margin: 15px;
+}
+
+.relatedContainer {
+  font-family: Montserrat;
+  margin: 15px 0;
+}
+.relatedContainer h3 {
+  font-weight: 500;
+}
+.relatedContainer h4 {
+  font-weight: 400;
 }
 
 @media only screen and (max-width: 700px) {

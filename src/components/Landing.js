@@ -1,5 +1,6 @@
 import React from 'react';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import { Link } from 'gatsby';
 import Fade from 'react-reveal';
 import Slide from 'react-reveal';
 import * as style from '../styles/styles.module.css';
@@ -15,13 +16,13 @@ export default function Landing() {
       section: 'getStarted',
     },
     {
-      text: 'latest post',
+      text: 'latest',
       section: 'latestPost',
     },
 
     {
-      text: 'about',
-      section: 'about',
+      text: 'mission',
+      section: 'mission',
     },
 
   ];
@@ -46,6 +47,9 @@ export default function Landing() {
                 </li>
               );
             })}
+            <li>
+              <Link to='/posts' className={style.navLink}>blog posts</Link>
+            </li>
           </ul>
         </nav>
       </Slide>

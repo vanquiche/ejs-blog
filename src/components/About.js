@@ -11,7 +11,7 @@ import { Slide } from 'react-reveal';
 export default function About() {
   return (
     <section
-      id='about'
+      id='mission'
       className={style.aboutCard}
       style={{ backgroundColor: '#897085' }}
     >
@@ -31,10 +31,11 @@ export default function About() {
             feeling scared, overwhelmed, and like an impostor. Relax, those
             feelings are part of the process, every programmer was once exactly
             where you are. If you’re still shaking in your slippers then don’t
-            worry I’m here to help. Everything Javascript is your number one
-            resource to jump-start your education. <br />You’ll find everything you’ll
-            need to get started and none of the filler, from plain ol’ JS to
-            Node plus everything in between.
+            worry I’m here to help. <br />
+            Everything Javascript is your number one resource to jump-start your
+            education. You’ll find everything you’ll need to get started and
+            none of the filler, from plain ol’ JS to Node plus everything in
+            between.
           </p>
         </Slide>
         <Slide bottom>
