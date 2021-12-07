@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-post-js",
+    "path": "/posts/new-post-with-tags",
+    "result": {"data":{"post":{"id":"-315bbb92-3f2a-5dfa-be85-68af8f691672","publishedAt":null,"_rawBody":[{"_key":"b138ae7d8bd8","_type":"block","children":[{"_key":"21b8b36b8f17","_type":"span","marks":[],"text":"lsjflksjdflksjdflksjdfkls sdlfjsdlkfjsdlfkjsdlfkjsdflj sfjlsdkfjsldfkjsldkdfjlkjsd ljsddfflkjsdflkjsdflfjl lslkdfjlskdfjlskdfjsldkfjsldfkj lsdfjlskdfjsdflkjsdflkjsdf lksjdflksjdflksjdflkjsf"}],"markDefs":[],"style":"normal"}],"author":{"name":"Steve Vang"},"subTitle":"Tags for SEO","title":"New Post with Tags","slug":{"current":"new-post-with-tags"},"categories":[{"id":"-75f3c1e8-85c4-50ee-878a-189fb25d8b44","title":"framework"}]},"category":{"edges":[{"node":{"title":"This is the fifth Blog post","subTitle":"Right before the beat drops","slug":{"current":"this-is-the-fifth-blog-post"},"categories":[{"id":"-75f3c1e8-85c4-50ee-878a-189fb25d8b44","title":"framework"}]}}]}},"pageContext":{"id":"-315bbb92-3f2a-5dfa-be85-68af8f691672","category":"framework"}},
+    "staticQueryHashes": []}
