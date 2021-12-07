@@ -30,7 +30,6 @@ export default function WhyJSslide4() {
             it the perfect stepping stone. Once you’ve mastered JS and are ready
             to mingle with{' '}
             <Typewriter
-              className={style.typewriter}
               options={{
                 strings: typeStrings,
                 autoStart: true,

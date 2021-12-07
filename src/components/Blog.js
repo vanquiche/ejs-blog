@@ -24,8 +24,8 @@ export default function Blog({ title, subTitle, block, info }) {
       <article className={style.blogBody}>
         <header>
           <Authorship meta={info} time={readTime}/>
-          <h2 className={style.blogTitle}>{title.toUpperCase()}</h2>
-          <h4 className={style.blogSubTitle}>{subTitle.toUpperCase()}</h4>
+          <h2 className={style.blogTitle}>{title}</h2>
+          <h4 className={style.blogSubTitle}>{subTitle}</h4>
         </header>
         {/* author, date published, time to read */}
         <PortableText blocks={block} />
