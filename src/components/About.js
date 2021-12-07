@@ -28,7 +28,7 @@ export default function About() {
         <Slide bottom>
           <p>
             If you’ve just started your Javascript journey then you’re probably
-            feeling scared, overwhelmed, and like an impostor. Relax, those
+            feeling scared, overwhelmed, and lost. Relax, those
             feelings are part of the process, every programmer was once exactly
             where you are. If you’re still shaking in your slippers then don’t
             worry I’m here to help. <br />

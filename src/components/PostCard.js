@@ -1,20 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
+import { Slide, Bounce } from 'react-reveal';
 import * as style from '../styles/styles.module.css';
 
-export default function PostCard({
-  slug,
-  title,
-  subTitle
-}) {
+export default function PostCard({ date, slug, title, subTitle }) {
+  const [showText, setShowText] = useState(false);
   return (
-    <article className={style.postLink}>
-        <Link to={`/posts/${slug.current}`}>
-          <h2 className={style.postTitle}>{title.toUpperCase()}</h2>
-          <h4 className={style.postSubTitle}>{subTitle}</h4>
-          <small className={style.readText}></small>
-        </Link>
-      </article>
-  )
-
+    <article
+      className={style.postLink}
+      onMouseEnter={() => setShowText(true)}
+      onMouseLeave={() => setShowText(false)}
+    >
+      {showText && (
+        <Bounce top>
+          <div className={style.postDot}></div>
+        </Bounce>
+      )}
+      <p className={style.postDate}>{date}</p>
+      <Link to={`/posts/${slug.current}`}>
+        <h2 className={style.postTitle}>{title.toUpperCase()}</h2>
+        <br />
+        <h4 className={style.postSubTitle}>{subTitle.toUpperCase()}</h4>
+        {showText && (
+          <Slide left>
+            <p className={style.readText}>read now</p>
+          </Slide>
+        )}
+      </Link>
+    </article>
+  );
 }

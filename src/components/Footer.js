@@ -16,14 +16,14 @@ export default function Footer() {
             Before you go, consider signing up for the newsletter to stay in
             touch. <br />I don’t share your info and you can opt-out anytime.
           </p>
-          <div className={style.formContainer}>
+          <form className={style.formContainer}>
             <input
               className={style.formTextfield}
               type='email'
               placeholder='sayhello@email.com'
             />
             <input className={style.btn} type='submit' value='sign-up' />
-          </div>
+          </form>
         </form>
         {/* ko-fi */}
         <div className={style.kofi}>

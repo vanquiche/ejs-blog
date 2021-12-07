@@ -14,6 +14,7 @@ export default function GetStarted() {
             subTitle
             title
             _rawSlug
+            publishedAt(formatString: "MMM DD YYYY")
           }
         }
       }
@@ -34,9 +35,14 @@ export default function GetStarted() {
           {data.allSanityPost.edges.map((item) => {
             // move this into a separate component
             // with its own state, and inherit props
-            const { title, subTitle, _rawSlug } = item.node;
+            const { title, subTitle, _rawSlug, publishedAt } = item.node;
             return (
-              <PostCard title={title} subTitle={subTitle} slug={_rawSlug} />
+              <PostCard
+                date={publishedAt}
+                title={title}
+                subTitle={subTitle}
+                slug={_rawSlug}
+              />
             );
           })}
         </Fade>

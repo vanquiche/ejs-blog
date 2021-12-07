@@ -17,7 +17,7 @@ const Posts = () => {
             subTitle
             title
             _rawSlug
-            publishedAt(formatString: "MM DD YYYY")
+            publishedAt(formatString: "MMM DD YYYY")
           }
         }
       }
@@ -32,9 +32,14 @@ const Posts = () => {
         </SectionTitle>
         <div className={style.postContainer}>
           {posts.map((post) => {
-            const { title, subTitle, _rawSlug } = post.node;
+            const { title, subTitle, _rawSlug, publishedAt } = post.node;
             return (
-              <PostCard title={title} subTitle={subTitle} slug={_rawSlug} />
+              <PostCard
+                date={publishedAt}
+                title={title}
+                subTitle={subTitle}
+                slug={_rawSlug}
+              />
             );
           })}
         </div>
