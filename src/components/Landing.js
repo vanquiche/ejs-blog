@@ -12,6 +12,10 @@ export default function Landing() {
       section: 'whyJS',
     },
     {
+      text: 'mission',
+      section: 'mission',
+    },
+    {
       text: 'get started',
       section: 'getStarted',
     },
@@ -19,12 +23,6 @@ export default function Landing() {
       text: 'latest',
       section: 'latestPost',
     },
-
-    {
-      text: 'mission',
-      section: 'mission',
-    },
-
   ];
   return (
     <section

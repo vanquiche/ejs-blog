@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import { Slide, Bounce } from 'react-reveal';
+import { Fade, Bounce } from 'react-reveal';
 import * as style from '../styles/styles.module.css';
 
 export default function PostCard({ date, slug, title, subTitle }) {
@@ -22,9 +22,9 @@ export default function PostCard({ date, slug, title, subTitle }) {
         <br />
         <h4 className={style.postSubTitle}>{subTitle.toUpperCase()}</h4>
         {showText && (
-          <Slide left>
+          <Fade>
             <p className={style.readText}>read now</p>
-          </Slide>
+          </Fade>
         )}
       </Link>
     </article>

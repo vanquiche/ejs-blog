@@ -24,9 +24,9 @@ const IndexPage = () => {
     <main className={style.mainWrapper}>
       <Landing />
       <Deck slides={pages} />
+      <About />
       <GetStarted />
       <LatestPost />
-      <About />
       <Footer />
     </main>
   );
