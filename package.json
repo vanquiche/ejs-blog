@@ -12,7 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "dev": "netlify dev"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -20,6 +21,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
     "@sanity/block-content-to-react": "^3.0.0",
+    "axios": "^0.21.4",
     "dotenv": "^8.6.0",
     "gatsby": "^3.13.1",
     "gatsby-plugin-anchor-links": "^1.2.1",
@@ -30,6 +32,7 @@
     "gatsby-source-sanity": "^7.2.1-next.1",
     "gatsby-transformer-sharp": "^3.14.0",
     "react": "^17.0.1",
+    "react-axios": "^2.0.5",
     "react-dom": "^17.0.1",
     "react-hook-form": "^7.20.5",
     "react-reveal": "^1.2.2",

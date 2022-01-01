@@ -14,6 +14,7 @@ const Posts = () => {
       allSanityPost(sort: { fields: _createdAt, order: DESC }) {
         edges {
           node {
+            _id
             subTitle
             title
             _rawSlug
@@ -32,9 +33,10 @@ const Posts = () => {
         </SectionTitle>
         <div className={style.postContainer}>
           {posts.map((post) => {
-            const { title, subTitle, _rawSlug, publishedAt } = post.node;
+            const { title, subTitle, _rawSlug, publishedAt, _id } = post.node;
             return (
               <PostCard
+                key={_id}
                 date={publishedAt}
                 title={title}
                 subTitle={subTitle}

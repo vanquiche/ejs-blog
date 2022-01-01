@@ -465,12 +465,38 @@ section {
 
 }
 
+.commentContainer {
+  display: flex;
+  flex-direction: column;
+  width: clamp(300px, 90%, 1000px);
+  margin: 0 auto;
+}
+
+.commentBody {
+  /* margin: 10px 0; */
+  padding: 15px;
+  font-family: Montserrat;
+}
+.commentBody:nth-child(odd) {
+  background-color: rgb(82, 82, 82);
+  color: whitesmoke;
+}
+.commentUser {
+  font-size: 1.5rem;
+}
+.commentDate {
+  font-size: 0.7rem;
+}
+.commentText {
+  margin: 10px 0;
+}
+
 .related {
   display: flex;
   flex-direction: column;
   margin: 25px auto;
   /* outline: 1px solid red; */
-  width: 500px;
+  width: clamp(300px, 90%, 1000px);
 }
 .relatedHeading {
   text-align: center;
@@ -490,6 +516,19 @@ section {
 .relatedContainer h4 {
   font-weight: 400;
 }
+.commentForm {
+  padding: 20px;
+  font-family: Montserrat;
+  display: flex;
+  flex-direction: column;
+}
+.commentForm input[type="text"]{
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin: 5px 0;
+}
+
 
 .contactForm {
   padding: 20px;

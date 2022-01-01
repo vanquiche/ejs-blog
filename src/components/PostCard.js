@@ -3,10 +3,11 @@ import { Link } from 'gatsby';
 import { Fade, Bounce } from 'react-reveal';
 import * as style from '../styles/styles.module.css';
 
-export default function PostCard({ date, slug, title, subTitle }) {
+export default function PostCard({key, date, slug, title, subTitle }) {
   const [showText, setShowText] = useState(false);
   return (
     <article
+      key={key}
       className={style.postLink}
       onMouseEnter={() => setShowText(true)}
       onMouseLeave={() => setShowText(false)}
